@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="150.0" minWidth="350.0" prefHeight="480.0" prefWidth="640.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.menuClusterController">
+    <StackPane prefHeight="215.0" prefWidth="208.0" styleClass="body" stylesheets="@../style.css">
+        <AnchorPane id="logoImageView" prefHeight="400.0" prefWidth="300.0" stylesheets="@../style.css" />
+    </StackPane>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+      <children>
+         <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="150.0">
+            <font>
+               <Font name="Consolas Bold" size="23.0" />
+            </font>
+         </Text>
+           <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome DataBase" textAlignment="CENTER" wrappingWidth="150.0">
+               <font>
+                   <Font name="Consolas Bold" size="18.0" />
+               </font>
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin>
+           </Text>
+           <TextField fx:id="DataBaseTextField" prefHeight="26.0" prefWidth="302.0" promptText="mapdb" />
+           <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Tabella" textAlignment="CENTER" wrappingWidth="150.0">
+               <font>
+                   <Font name="Consolas Bold" size="18.0" />
+               </font>
+            <VBox.margin>
+               <Insets top="3.0" />
+            </VBox.margin>
+           </Text>
+           <TextField fx:id="TabellaTextField" prefHeight="30.0" prefWidth="302.0" promptText="exampleTab" />
+           <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Utente" textAlignment="CENTER" wrappingWidth="150.0">
+               <font>
+                   <Font name="Consolas Bold" size="18.0" />
+               </font>
+            <VBox.margin>
+               <Insets top="3.0" />
+            </VBox.margin>
+           </Text>
+           <TextField fx:id="UtenteTextField" prefHeight="26.0" prefWidth="302.0" promptText="MapUser" />
+           <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" textAlignment="CENTER" wrappingWidth="150.0">
+               <font>
+                   <Font name="Consolas Bold" size="18.0" />
+               </font>
+            <VBox.margin>
+               <Insets top="3.0" />
+            </VBox.margin>
+           </Text>
+           <PasswordField fx:id="PasswordTextField" prefHeight="25.0" prefWidth="302.0" promptText="map" />
+           <HBox prefHeight="141.0" prefWidth="302.0" spacing="10">
+               <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="141.0" prefWidth="130.0" spacing="10" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                   <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Profondità:" textAlignment="CENTER" wrappingWidth="145.0" VBox.vgrow="ALWAYS">
+                       <font>
+                           <Font name="Consolas Bold" size="18.0" />
+                       </font>
+                   </Text>
+                   <TextField fx:id="DepthTextField" prefHeight="26.0" prefWidth="150.0" promptText="1-5" VBox.vgrow="ALWAYS" />
+                   <ComboBox fx:id="comboBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="155.0" promptText="Single o Average" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+                   <Button fx:id="DatabaseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDatabase" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #ae0000;" text="Carica da Database" textFill="WHITE" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                       <font>
+                           <Font name="System Bold" size="12.0" />
+                       </font>
+                   </Button>
+               </VBox>
+               <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="173.0" prefWidth="5.0" spacing="10" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                   <Text fill="#ae0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome File:" textAlignment="CENTER" wrappingWidth="142.0" VBox.vgrow="ALWAYS">
+                       <font>
+                           <Font name="Consolas Bold" size="18.0" />
+                       </font>
+                   </Text>
+                   <TextField fx:id="FileNameTextField" maxWidth="1.7976931348623157E308" prefHeight="26.0" promptText="es. exampleTab4.dat" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+                   <Button fx:id="FileButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFile" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #ae0000;" text="Carica da File" textFill="WHITE" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                       <font>
+                           <Font name="System Bold" size="12.0" />
+                       </font>
+                   </Button>
+               </VBox>
+           </HBox>
+           <Button fx:id="BackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#backToMenuConnect" prefHeight="30.0" prefWidth="302.0" style="-fx-background-color: #ae0000;" text="Indietro" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                   <Font name="System Bold" size="12.0" />
+               </font>
+            <VBox.margin>
+               <Insets top="3.0" />
+            </VBox.margin>
+           </Button>
+      </children>
+   </VBox>
+    <StackPane prefHeight="215.0" prefWidth="208.0" styleClass="body" stylesheets="@../style.css">
+        <AnchorPane id="logoImageView" prefHeight="400.0" prefWidth="300.0" stylesheets="@../style.css" />
+    </StackPane>
+</HBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="150.0" minWidth="350.0" prefHeight="480.0" prefWidth="640.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.resultController">
+    <StackPane prefHeight="215.0" prefWidth="208.0" styleClass="body" stylesheets="@../style.css">
+        <AnchorPane id="logoImageView" prefHeight="400.0" prefWidth="300.0" stylesheets="@../style.css" />
+    </StackPane>
+    <AnchorPane prefHeight="400.0" prefWidth="300.0" stylesheets="@../style.css" HBox.hgrow="ALWAYS">
+        <Text fill="#ae0000" layoutX="2.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Risultato" underline="true" wrappingWidth="269.0" AnchorPane.bottomAnchor="430.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="Consolas Bold" size="36.0" />
+            </font>
+        </Text>
+      <TextArea fx:id="resultTextArea" editable="false" layoutX="18.0" layoutY="91.0" prefHeight="139.0" prefWidth="222.0" wrapText="true" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="91.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <Text fill="#ae0000" layoutX="14.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci nuova iterata" wrappingWidth="241.0" AnchorPane.bottomAnchor="225.14013671875">
+         <font>
+            <Font name="Consolas Bold" size="15.0" />
+         </font>
+      </Text>
+        <TextField fx:id="IterateTextField" layoutX="11.0" layoutY="255.0" prefHeight="26.0" prefWidth="321.0" promptText="1" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" />
+        <Button fx:id="RepeatButton" layoutX="9.0" layoutY="324.0" mnemonicParsing="false" onAction="#repeatIteration" prefHeight="30.0" prefWidth="257.0" style="-fx-background-color: #ae0000;" text="Ripeti iterazione" textFill="WHITE" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <Button fx:id="SaveButton" layoutX="9.0" layoutY="394.0" mnemonicParsing="false" onAction="#saveOnFile" prefHeight="30.0" prefWidth="251.0" style="-fx-background-color: #ae0000;" text="Salva su File" textFill="WHITE" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+        <Button fx:id="BackButton" layoutX="9.0" layoutY="436.0" mnemonicParsing="false" onAction="#backToMenuCluster" prefHeight="30.0" style="-fx-background-color: #ae0000;" text="Indietro" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <ComboBox fx:id="comboBox" layoutX="10.0" layoutY="288.0" prefHeight="25.0" prefWidth="251.0" promptText="Single o Average" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="SaveNameTextField" layoutX="8.0" layoutY="362.0" prefHeight="26.0" prefWidth="251.0" promptText="es. exampleTab5.dat" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0" />
+    </AnchorPane>
+    <StackPane prefHeight="215.0" prefWidth="208.0" styleClass="body" stylesheets="@../style.css">
+        <AnchorPane id="logoImageView" prefHeight="400.0" prefWidth="300.0" stylesheets="@../style.css" />
+    </StackPane>
+</HBox>
