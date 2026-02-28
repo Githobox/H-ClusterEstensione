@@ -1,0 +1,25 @@
+﻿# Cartelle compilate
+bin/
+out/
+target/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Temporanei
+*.class
+*.log
+*.tmp
+*~
+
+# File di configurazione locali
+*.bak
