@@ -79,11 +79,12 @@ public class HierachicalClusterMiner implements Serializable {
      * @throws IOException se si verifica un errore di I/O
      */
     public void salva(String fileName) throws FileNotFoundException, IOException {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
+        File file = new File(fileName);
+        file.getParentFile().mkdirs(); // Crea la cartella se non esiste
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(this);
-            out.close();
-        }catch (IOException e){
-            throw new IOException("[!] Errore di salvataggi");
+        } catch (IOException e) {
+            throw new IOException("[!] Errore di salvataggio: " + e.getMessage());
         }
     }
     /**
